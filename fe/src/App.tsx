@@ -32,6 +32,9 @@ function App() {
           </Button>
         </motion.div>
       )}
+      <div className="fixed bottom-0 right-0 left-0 text-center bg-slate-200 text-gray-600">
+        Built by: Sarthak Kumar Behera
+      </div>
     </div>
   );
 }
