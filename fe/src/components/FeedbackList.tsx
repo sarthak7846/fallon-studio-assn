@@ -59,15 +59,13 @@ export const FeedbackList = ({ onClose }: { onClose: () => void }) => {
               <h1 className="text-xl ">Full Name</h1>
               <h1 className="text-xl ">Feedback Message</h1>
             </motion.div>
-            <div className="overflow-y-auto scroll-auto border-b border-l border-r rounded-b-xl border-slate-800 h-[69vh]">
+            <div className="overflow-y-auto scroll-auto border-b border-l border-r rounded-b-xl border-slate-800 h-[70vh]">
               {feedbacks.map((feedback, inx) => (
                 <ListItem
                   key={inx}
-                  inx={inx}
                   email={feedback.email}
                   username={feedback.username}
                   feedbackMessage={feedback.feedbackMessage}
-                  len={feedbacks.length}
                 />
               ))}
             </div>
