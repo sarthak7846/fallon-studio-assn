@@ -28,8 +28,6 @@ app.get("/feedbacks", async (req, res) => {
 });
 
 app.post("/submit-feedback", async (req, res) => {
-  console.log(req.body);
-
   const feedback = req.body;
 
   try {

@@ -16,7 +16,6 @@ import { useState } from "react";
 import { SpinnerIcon } from "@/icons/SpinnerIcon";
 import axios from "axios";
 import { BACKEND_URL } from "@/config";
-import { fetchFeedbacks } from "@/services/feedbackService";
 import { toast } from "sonner";
 
 const formSchema = z.object({
@@ -44,8 +43,6 @@ export const FeedbackForm = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log("values", values);
-
     setLoading(true);
     try {
       await axios.post(`${BACKEND_URL}/submit-feedback`, values);

@@ -1,1 +1,3 @@
-export const BACKEND_URL = "http://localhost:8000";
+const env = import.meta.env;
+
+export const BACKEND_URL = env.VITE_BACKEND_URL;
